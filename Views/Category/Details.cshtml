@@ -1,0 +1,20 @@
+﻿@model MachineTest.Models.Category
+
+@{
+    ViewBag.Title = "Category Details";
+}
+
+<h2>Category Details</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>Category ID</dt>
+        <dd>@Model.CategoryId</dd>
+
+        <dt>Category Name</dt>
+        <dd>@Model.CategoryName</dd>
+    </dl>
+</div>
+
+@Html.ActionLink("Edit", "Edit", new { id = Model.CategoryId }, new { @class = "btn btn-warning" }) |
+@Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })

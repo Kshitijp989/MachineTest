@@ -1,0 +1,26 @@
+﻿@model MachineTest.Models.Product
+
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>Product ID</dt>
+        <dd>@Model.ProductId</dd>
+
+        <dt>Product Name</dt>
+        <dd>@Model.ProductName</dd>
+
+        <dt>Category ID</dt>
+        <dd>@Model.CategoryId</dd>
+
+        <dt>Category Name</dt>
+        <dd>@Model.Category.CategoryName</dd>
+    </dl>
+</div>
+
+@Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }, new { @class = "btn btn-warning" }) |
+@Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })

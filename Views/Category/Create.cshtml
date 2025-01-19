@@ -1,0 +1,18 @@
+﻿@model MachineTest.Models.Category
+
+@{
+    ViewBag.Title = "Create Category";
+}
+
+<h2>Create Category</h2>
+
+@using (Html.BeginForm("Create", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="CategoryName">Category Name</label>
+        @Html.TextBoxFor(model => model.CategoryName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.CategoryName, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+}
